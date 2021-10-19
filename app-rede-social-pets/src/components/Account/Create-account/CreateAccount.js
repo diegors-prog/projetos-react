@@ -1,10 +1,15 @@
 import React from 'react';
 
 const CreateAccount = () => {
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <div>
-      <h1>Create Account</h1>
-    </div>
+    <section className="animeLeft">
+      <h1 className="title">Cadastre-se</h1>
+      <form onSubmit={handleSubmit}></form>
+    </section>
   );
 };
 
