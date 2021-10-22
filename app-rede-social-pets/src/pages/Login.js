@@ -10,7 +10,7 @@ import styles from './Login.module.css';
 function Login() {
   const { login } = React.useContext(UserContext);
 
-  if (login === true) return <Navigate to="account" />;
+  if (login === true) return <Navigate to="/" />;
   return (
     <section className={styles.login}>
       <div className={styles.forms}>

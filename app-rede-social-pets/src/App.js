@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import { UserStorage } from './UserContext';
+import Footer from './components/Footer';
+import Feed from './components/Feed/Feed';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
         <UserStorage>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
+            <ProtectedRoute path="/*" element={<Home />} />
+            <Route path="login/*" element={<Login />} />
           </Routes>
           <Footer />
         </UserStorage>
