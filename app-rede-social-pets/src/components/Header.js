@@ -6,6 +6,12 @@ import { UserContext } from '../UserContext';
 
 const Header = () => {
   const { data, userLogout } = React.useContext(UserContext);
+  const { dropdownMenu, setDropdownMenu } = React.useState(false);
+
+  function handleDropdownMenu(event) {
+    event.preventDefault();
+    setDropdownMenu(!dropdownMenu);
+  }
 
   return (
     <header className={styles.header}>
@@ -14,8 +20,9 @@ const Header = () => {
           <Dogs />
         </Link>
         {data ? (
-          <Link className={styles.login} to="/account">
+          <Link className={styles.login} to="/profile">
             {data.nome}
+
             <button onClick={userLogout}>Sair</button>
           </Link>
         ) : (

@@ -49,3 +49,38 @@ export function USER_POST(body) {
     },
   };
 }
+
+export function PUBLICATION_POST(formData, token) {
+  return {
+    url: API_URL + '/api/photo',
+    options: {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + token,
+      },
+      body: formData,
+    },
+  };
+}
+
+export function PUBLICATION_DELETE(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+    },
+  };
+}
+
+export function PUBLICATIONS_GET() {
+  return {
+    url: API_URL + '/api/photo',
+    options: {
+      method: 'GET',
+      cache: 'no-store',
+    },
+  };
+}

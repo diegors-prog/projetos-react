@@ -9,21 +9,20 @@ import { ReactComponent as CreatePublication } from '../Assets/material-add-to-p
 const Footer = () => {
   const { login } = React.useContext(UserContext);
 
+  if (!login) return null;
   return (
     <footer className={styles.footer}>
-      {login && (
-        <nav className={`${styles.nav} container`}>
-          <Link to="/">
-            <Feed />
-          </Link>
-          <Link to="/create-publication">
-            <CreatePublication />
-          </Link>
-          <Link to="/profile">
-            <Profile />
-          </Link>
-        </nav>
-      )}
+      <nav className={`${styles.nav} container`}>
+        <Link style={{ padding: '0px 15px 0px 15px' }} to="/">
+          <Feed />
+        </Link>
+        <Link style={{ padding: '0px 15px 0px 15px' }} to="/create-publication">
+          <CreatePublication />
+        </Link>
+        <Link style={{ padding: '0px 15px 0px 15px' }} to="/profile">
+          <Profile />
+        </Link>
+      </nav>
     </footer>
   );
 };

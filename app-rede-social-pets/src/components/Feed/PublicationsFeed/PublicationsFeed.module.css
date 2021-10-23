@@ -1,0 +1,67 @@
+.publication {
+  background: #fff;
+  margin: 15px 10px;
+  border-radius: 10px;
+  padding: 5px 0px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.profile span {
+  margin-left: 5px;
+}
+
+.profile p {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.description {
+  padding: 0 5px;
+}
+
+.description h2 {
+  margin-top: 5px;
+  font-size: 30px;
+}
+
+.description span {
+  font-style: italic;
+}
+
+.description p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #949c9b;
+}
+
+.viewComment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons {
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.comments {
+  margin-left: 20px;
+}
+
+.svg {
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.35);
+  width: 50px;
+  height: 35px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 10px;
+}

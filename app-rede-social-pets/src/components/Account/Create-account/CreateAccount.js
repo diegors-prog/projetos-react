@@ -10,7 +10,7 @@ import Input from '../../Forms/Input';
 const CreateAccount = () => {
   const username = useForm();
   const email = useForm('email');
-  const password = useForm('password');
+  const password = useForm();
 
   const { userLogin } = React.useContext(UserContext);
   const { loading, error, request } = useFetch();
