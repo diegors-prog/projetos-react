@@ -27,7 +27,7 @@ const CreateAccount = () => {
   }
 
   return (
-    <section className="animeLeft">
+    <section style={{ marginTop: '2rem' }} className="animeLeft">
       <h1 className="title">Cadastre-se</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name="username" {...username} />

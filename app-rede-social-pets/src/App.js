@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import { UserStorage } from './UserContext';
 import Footer from './components/Footer';
-import Feed from './components/Feed/Feed';
+import NotFound from './components/NotFound/NotFound';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
           <Routes>
             <ProtectedRoute path="/*" element={<Home />} />
             <Route path="login/*" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </UserStorage>

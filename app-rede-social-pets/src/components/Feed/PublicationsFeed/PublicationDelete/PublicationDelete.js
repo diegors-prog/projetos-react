@@ -2,15 +2,19 @@ import React from 'react';
 import { PUBLICATION_DELETE } from '../../../../api';
 import useFetch from '../../../../Hooks/useFetch';
 import styles from './PublicationDelete.module.css';
+import { ReactComponent as Delete } from '../../../../Assets/material-delete-forever-black.svg';
 
 const PublicationDelete = ({ id }) => {
   const { loading, request } = useFetch();
 
-  async function handleClick() {
+  async function handleClick(event) {
+    event.preventDefault();
     const confirm = window.confirm('Tem certeza que deseja deletar?');
-    const { url, options } = PUBLICATION_DELETE(id);
-    const { response } = await request(url, options);
-    if (response.ok) window.location.reload();
+    if (confirm) {
+      const { url, options } = PUBLICATION_DELETE(id);
+      const { response } = await request(url, options);
+      if (response.ok) window.location.reload();
+    }
   }
 
   return (
@@ -21,7 +25,7 @@ const PublicationDelete = ({ id }) => {
         </button>
       ) : (
         <button onClick={handleClick} className={styles.delete}>
-          Deletar
+          <Delete />
         </button>
       )}
     </>

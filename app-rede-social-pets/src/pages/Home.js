@@ -4,6 +4,7 @@ import Feed from '../components/Feed/Feed';
 import CreatePublication from '../components/CreatePublication/CreatePublication';
 import Profile from '../components/Profile/Profile';
 import styles from './Home.module.css';
+import NotFound from '../components/NotFound/NotFound';
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
           <Route path="/" element={<Feed />} />
           <Route path="/create-publication" element={<CreatePublication />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </section>

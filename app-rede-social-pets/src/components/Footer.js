@@ -7,7 +7,7 @@ import { ReactComponent as Profile } from '../Assets/cassio.svg';
 import { ReactComponent as CreatePublication } from '../Assets/material-add-to-photos.svg';
 
 const Footer = () => {
-  const { login } = React.useContext(UserContext);
+  const { data, login } = React.useContext(UserContext);
 
   if (!login) return null;
   return (
@@ -20,7 +20,9 @@ const Footer = () => {
           <CreatePublication />
         </Link>
         <Link style={{ padding: '0px 15px 0px 15px' }} to="/profile">
-          <Profile />
+          <div className={styles.profile}>
+            <span>{data.nome.substr(0, 1).toUpperCase()}</span>
+          </div>
         </Link>
       </nav>
     </footer>
