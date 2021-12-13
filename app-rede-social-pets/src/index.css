@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.modal-dialog.fullscreen {
+  margin: 0;
+  height: 100vh;
+}
+
+.modal-dialog.fullscreen .modal-content {
+  min-height: 100vh;
+}

@@ -28,5 +28,9 @@
   justify-content: center;
   align-items: center;
   font-family: var(--type-second);
-  margin-bottom: 3px;
+}
+
+.profile span {
+  list-style: none !important;
+  text-decoration: none !important;
 }

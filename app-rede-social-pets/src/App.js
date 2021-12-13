@@ -7,6 +7,7 @@ import { UserStorage } from './UserContext';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound/NotFound';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

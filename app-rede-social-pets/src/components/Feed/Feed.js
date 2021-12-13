@@ -38,7 +38,7 @@ const Feed = () => {
         </div>
         <span>Ufa!! Nenhum pet perdido!</span>
         <p>Alerte as pessoas ao redor caso seu pet tenha fugido</p>
-        <Link className={styles.button} to="/profile">
+        <Link className={styles.button} to="/create-publication">
           Alertar Fuga
         </Link>
       </section>
